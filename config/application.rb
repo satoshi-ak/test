@@ -11,6 +11,8 @@ module TestMan
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.generators do |g|
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
       g.test_framework :rspec,
                        model_specs: true,
                        view_specs: false,
